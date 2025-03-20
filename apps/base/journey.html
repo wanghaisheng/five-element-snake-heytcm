@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>修炼之旅 - 五行蛇Online</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- iOS状态栏 -->
+    <div class="ios-status-bar">
+        <div class="status-time">9:41</div>
+        <div class="status-icons">
+            <span class="status-signal"></span>
+            <span class="status-wifi"></span>
+            <span class="status-battery"></span>
+        </div>
+    </div>
+
+    <!-- 修炼之旅页面 -->
+    <div class="app-container">
+        <header class="app-header">
+            <h1>修炼之旅</h1>
+            <div class="user-profile">
+                <img src="img/avatar.jpg" alt="用户头像">
+            </div>
+        </header>
+
+        <div class="journey-stats">
+            <div class="stat-item">
+                <span class="stat-value">24</span>
+                <span class="stat-label">当前等级</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">3/5</span>
+                <span class="stat-label">进化阶段</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">68%</span>
+                <span class="stat-label">神兽化进度</span>
+            </div>
+        </div>
+
+        <div class="evolution-progress">
+            <h2>进化路线图</h2>
+            <div class="evolution-timeline">
+                <div class="timeline-node completed">
+                    <div class="node-icon">初</div>
+                    <div class="node-label">初始形态</div>
+                </div>
+                <div class="timeline-line completed"></div>
+                <div class="timeline-node completed">
+                    <div class="node-icon">中</div>
+                    <div class="node-label">中级形态</div>
+                </div>
+                <div class="timeline-line active"></div>
+                <div class="timeline-node active">
+                    <div class="node-icon">高</div>
+                    <div class="node-label">高级形态</div>
+                </div>
+                <div class="timeline-line"></div>
+                <div class="timeline-node">
+                    <div class="node-icon">神</div>
+                    <div class="node-label">神兽形态</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="skill-tree">
+            <h2>技能树</h2>
+            <div class="skill-grid">
+                <div class="skill-item unlocked">
+                    <div class="skill-icon">
+                        <div class="skill-icon-inner water"></div>
+                    </div>
+                    <h3>水流冲击</h3>
+                    <p>等级：3/5</p>
+                </div>
+                <div class="skill-item unlocked">
+                    <div class="skill-icon">
+                        <div class="skill-icon-inner water"></div>
+                    </div>
+                    <h3>寒冰路径</h3>
+                    <p>等级：4/5</p>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon locked">
+                        <div class="skill-icon-inner water"></div>
+                    </div>
+                    <h3>水幕防御</h3>
+                    <p>需要：高级形态</p>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon locked">
+                        <div class="skill-icon-inner water"></div>
+                    </div>
+                    <h3>冰封领域</h3>
+                    <p>需要：神兽形态</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="daily-tasks">
+            <h2>每日修炼</h2>
+            <div class="task-list">
+                <div class="task-item completed">
+                    <div class="task-check">✓</div>
+                    <div class="task-info">
+                        <h3>日常吞噬</h3>
+                        <p>吞噬50个灵气光点</p>
+                    </div>
+                    <div class="task-reward">+100经验</div>
+                </div>
+                <div class="task-item completed">
+                    <div class="task-check">✓</div>
+                    <div class="task-info">
+                        <h3>元素掌控</h3>
+                        <p>使用技能10次</p>
+                    </div>
+                    <div class="task-reward">+80经验</div>
+                </div>
+                <div class="task-item">
+                    <div class="task-check"></div>
+                    <div class="task-info">
+                        <h3>对战修炼</h3>
+                        <p>参与3场对战</p>
+                        <div class="task-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width:66%"></div>
+                            </div>
+                            <span class="progress-text">2/3</span>
+                        </div>
+                    </div>
+                    <div class="task-reward">+150经验</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部导航栏 -->
+    <nav class="tab-bar">
+        <a href="home.html" class="tab">
+            <div class="tab-icon home-icon"></div>
+            <span>首页</span>
+        </a>
+        <a href="journey.html" class="tab active">
+            <div class="tab-icon journey-icon"></div>
+            <span>修炼</span>
+        </a>
+        <a href="community.html" class="tab">
+            <div class="tab-icon community-icon"></div>
+            <span>社区</span>
+        </a>
+        <a href="profile.html" class="tab">
+            <div class="tab-icon profile-icon"></div>
+            <span>我的</span>
+        </a>
+    </nav>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

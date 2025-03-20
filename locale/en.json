@@ -1,0 +1,188 @@
+{
+  "nav": {
+    "features": "Features",
+    "gameplay": "Gameplay",
+    "play": "Play Now",
+    "screenshots": "Screenshots",
+    "download": "Download"
+  },
+  "hero": {
+    "title": "Wuxing Snake Online",
+    "subtitle": "Become the Five Elements Beast, Rule the Cultivation World!",
+    "description": "A multiplayer online competitive game that combines traditional snake gameplay with the Five Elements evolution system. Choose one of the five snake brothers, collect spiritual energy, evolve and awaken to become powerful elemental beasts!",
+    "cta": {
+      "primary": "Free Download",
+      "secondary": "Watch Demo"
+    }
+  },
+  "painPoints": {
+    "title": "Tired of Traditional Multiplayer Games?",
+    "repetitive": {
+      "title": "Repetitive Game Mechanics",
+      "description": "Bored of snake games without variation? Same game modes, same monotonous strategies."
+    },
+    "shallow": {
+      "title": "Shallow Gaming Experience",
+      "description": "Too simple, lacking challenge, no progression goals, losing interest after just a few minutes."
+    },
+    "noStrategy": {
+      "title": "Lack of Strategic Competition",
+      "description": "Pure speed and luck, rather than skill and strategy, making games lose depth and fun."
+    }
+  },
+  "solution": {
+    "title": "Wuxing Snake Online: Redefining Multiplayer Gaming",
+    "intro": "Wuxing Snake Online combines traditional snake gameplay with the Five Elements system and beast evolution, creating an entirely new concept of multiplayer online competitive gaming.",
+    "elementalSystem": {
+      "title": "Five Elements System",
+      "description": "Choose from Gold, Wood, Water, Fire, and Earth snakes, each with unique passive abilities and skill combinations for personalized gameplay."
+    },
+    "evolutionSystem": {
+      "title": "Evolution System",
+      "description": "Devour spiritual energy, grow continuously, break through evolution bottlenecks, and finally transform into mythical beasts with overwhelming power."
+    },
+    "skillSystem": {
+      "title": "Unique Skill System",
+      "description": "Master active skills, passive abilities, and ultimate beast transformations to strategically defeat opponents."
+    },
+    "mapSystem": {
+      "title": "Diverse Map Environments",
+      "description": "Battle in various maps like Five Elements Mountains, Ruins, Volcanoes, and use terrain advantages to secure victory."
+    }
+  },
+  "features": {
+    "title": "Game Features",
+    "brothers": {
+      "title": "The Story of Five Snake Brothers",
+      "description": "In the distant Five Elements Mountain, live five spiritual snakes: Golden Snake Ah Jin, Wood Snake Ah Mu, Water Snake Ah Shui, Fire Snake Ah Huo, and Earth Snake Ah Tu. When evil forces invade their homeland, they must become stronger and awaken as the Five Elements Beasts to protect their territory.",
+      "point1": "Choose your favorite snake brother and experience different gameplay styles",
+      "point2": "Unique character backstories and growth trajectories",
+      "point3": "Feel the bond and power between the five brothers"
+    },
+    "evolution": {
+      "title": "Evolution System: From Snake to Beast",
+      "description": "Each snake has a unique evolution path. Gain experience by devouring spiritual energy points, elemental orbs, and defeating opponents. After reaching specific conditions, evolve with the final forms being powerful Five Elements Beasts: Gold Snake to White Tiger, Wood Snake to Azure Dragon, Water Snake to Black Tortoise, Fire Snake to Vermilion Bird, Earth Snake to Qilin.",
+      "point1": "Three-stage evolution, each bringing significant changes to appearance and abilities",
+      "point2": "Choose enhancement directions during evolution to create your unique gameplay style",
+      "point3": "Beast forms possess ultimate skills that can turn the tide of battle"
+    },
+    "skills": {
+      "title": "Five Elements Skill System",
+      "description": "Based on the Five Elements principles, each elemental snake has unique skill combinations. Devour elemental orbs to gain powerful active skills, and after reaching the highest evolution stage, transform into the corresponding beast to release beast-exclusive skills.",
+      "point1": "Passive elemental skills: innate special abilities",
+      "point2": "Active combat skills: strategically use skills to defeat opponents",
+      "point3": "Beast ultimate skills: overwhelming battlefield control"
+    }
+  },
+  "gameplay": {
+    "title": "Gameplay",
+    "step1": {
+      "title": "Choose an Element",
+      "description": "Select from Gold, Wood, Water, Fire, or Earth to begin your cultivation journey. Each element has unique initial abilities and evolution paths."
+    },
+    "step2": {
+      "title": "Grow by Devouring",
+      "description": "Consume spiritual energy points on the map to increase your length and experience, gradually becoming stronger."
+    },
+    "step3": {
+      "title": "Collect Skills",
+      "description": "Devour randomly refreshed elemental orbs to gain and use powerful active skills, enhancing your combat power."
+    },
+    "step4": {
+      "title": "Strategic Combat",
+      "description": "Use your elemental attributes, skills, and environment to compete with other players, avoid being stunned, and try to surround and eliminate other snakes."
+    },
+    "step5": {
+      "title": "Evolve and Strengthen",
+      "description": "Evolve when reaching certain conditions, enhancing basic attributes and unlocking more powerful abilities."
+    },
+    "step6": {
+      "title": "Beast Transformation",
+      "description": "Collect beast souls and transform into powerful Five Elements Beasts at crucial moments to dominate the battlefield."
+    }
+  },
+  "play": {
+    "title": "Play Now",
+    "intro": "Experience Wuxing Snake Online multiplayer battles! Play directly in your browser without downloading.",
+    "instructions": {
+      "title": "Game Instructions",
+      "point1": "Use W, A, S, D or Arrow keys to control your snake's movement",
+      "point2": "Devour spiritual energy points to grow and gain score",
+      "point3": "Devour energy of your same element for double points",
+      "point4": "Press Space to use your element's special skill",
+      "point5": "Hitting yourself, other players, or walls will end your game"
+    },
+    "fullscreen": "Fullscreen Game",
+    "download": "Download Full Version"
+  },
+  "screenshots": {
+    "title": "App Screenshots",
+    "intro": "Experience different UI styles of Wuxing Snake Online and find the game experience that suits you best!",
+    "style1": {
+      "title": "Eastern Xianxia Style",
+      "description": "Integrating traditional Chinese cultural elements with ethereal UI design, showcasing the mystery and power of the Five Elements."
+    },
+    "style2": {
+      "title": "Modern Tech Style",
+      "description": "Futuristic interface design, a perfect combination of technology and Five Elements."
+    },
+    "style3": {
+      "title": "Cartoon Cute Style",
+      "description": "Adorable Q-style UI design, making the five snake brothers more approachable and friendly."
+    },
+    "fullDemo": "Open Full App Demo",
+    "demoHint": "Experience the complete App demo including onboarding process and paywall!"
+  },
+  "testimonials": {
+    "title": "Player Feedback",
+    "review1": {
+      "text": "Wuxing Snake perfectly combines the simple gameplay of snake with deep strategy! Each elemental snake has unique gameplay, and the evolution system is absolutely addictive. I've been playing for a week straight!",
+      "name": "Liu Xiaole",
+      "meta": "Fire Snake enthusiast, 87 hours played"
+    },
+    "review2": {
+      "text": "The beast transformation system is so cool! When I first evolved my Water Snake into Black Tortoise, the sense of achievement was unparalleled. The Five Elements interaction design also adds a lot of strategic depth.",
+      "name": "Wang Dahai",
+      "meta": "Water Snake player, Top 10 server ranking"
+    },
+    "review3": {
+      "text": "As an old snake game player, this game has rekindled my interest! The addition of elemental attributes and skill systems greatly enhances the strategy, making each game a new challenge.",
+      "name": "Zhang Xiaoyue",
+      "meta": "Wood Snake player, 120+ hours played"
+    }
+  },
+  "download": {
+    "title": "Join Wuxing Snake Online Now",
+    "intro": "Choose your platform, download the game for free, and begin your Five Elements cultivation journey!",
+    "ios": "iOS Version",
+    "android": "Android Version",
+    "web": "Web Version",
+    "webPlay": "Play Now"
+  },
+  "newsletter": {
+    "title": "Subscribe for Updates",
+    "description": "Be the first player to receive Wuxing Snake Online updates, events, and limited-time rewards!",
+    "subscribe": "Subscribe",
+    "privacy": "We respect your privacy and will never share your information."
+  },
+  "footer": {
+    "tagline": "Become the Five Elements Beast, Rule the Cultivation World!",
+    "game": "Game",
+    "features": "Features",
+    "gameplay": "Gameplay",
+    "play": "Play Now",
+    "screenshots": "Screenshots",
+    "download": "Download",
+    "support": "Support",
+    "faq": "FAQ",
+    "contact": "Contact Us",
+    "feedback": "Feedback",
+    "help": "Help Center",
+    "legal": "Legal",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "cookies": "Cookie Policy",
+    "followUs": "Follow Us",
+    "copyright": " 2023 Wuxing Snake Online. All rights reserved."
+  }
+}

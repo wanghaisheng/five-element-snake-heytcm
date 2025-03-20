@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>五行蛇Online - 引导流程</title>
+    <link rel="stylesheet" href="css/onboarding.css">
+</head>
+<body>
+    <!-- iOS状态栏 -->
+    <div class="ios-status-bar">
+        <div class="status-time">9:41</div>
+        <div class="status-icons">
+            <span class="status-signal"></span>
+            <span class="status-wifi"></span>
+            <span class="status-battery"></span>
+        </div>
+    </div>
+
+    <!-- 引导页面容器 -->
+    <div class="onboarding-container">
+        <!-- 页面指示器 -->
+        <div class="page-indicator">
+            <span class="indicator active" data-page="1"></span>
+            <span class="indicator" data-page="2"></span>
+            <span class="indicator" data-page="3"></span>
+            <span class="indicator" data-page="4"></span>
+        </div>
+
+        <!-- 引导页面轮播 -->
+        <div class="onboarding-carousel">
+            <!-- 页面1: 欢迎页 -->
+            <div class="onboarding-page active" id="page1">
+                <div class="page-content">
+                    <div class="onboarding-logo"></div>
+                    <h1>欢迎来到<br>五行蛇Online</h1>
+                    <p>在这个充满灵气的世界，你将操控五行蛇兄弟，收集灵气，进化成为强大的五行神兽！</p>
+                    <div class="animation-container">
+                        <div class="snake-animation"></div>
+                    </div>
+                </div>
+                <div class="page-actions">
+                    <button class="skip-btn">跳过</button>
+                    <button class="next-btn">下一步</button>
+                </div>
+            </div>
+
+            <!-- 页面2: 五行蛇介绍 -->
+            <div class="onboarding-page" id="page2">
+                <div class="page-content">
+                    <h1>五蛇兄弟</h1>
+                    <p>选择你喜欢的蛇兄弟，每种属性拥有独特的能力和进化路线。</p>
+                    <div class="snake-brothers">
+                        <div class="snake-item" data-element="gold">
+                            <div class="snake-avatar gold"></div>
+                            <h3>金蛇</h3>
+                        </div>
+                        <div class="snake-item" data-element="wood">
+                            <div class="snake-avatar wood"></div>
+                            <h3>木蛇</h3>
+                        </div>
+                        <div class="snake-item" data-element="water">
+                            <div class="snake-avatar water"></div>
+                            <h3>水蛇</h3>
+                        </div>
+                        <div class="snake-item" data-element="fire">
+                            <div class="snake-avatar fire"></div>
+                            <h3>火蛇</h3>
+                        </div>
+                        <div class="snake-item" data-element="earth">
+                            <div class="snake-avatar earth"></div>
+                            <h3>土蛇</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-actions">
+                    <button class="skip-btn">跳过</button>
+                    <button class="next-btn">下一步</button>
+                </div>
+            </div>
+
+            <!-- 页面3: 游戏玩法 -->
+            <div class="onboarding-page" id="page3">
+                <div class="page-content">
+                    <h1>修炼之道</h1>
+                    <p>吞噬灵气光点，收集元素灵珠，学习技能，进化成神兽，战胜对手！</p>
+                    <div class="gameplay-features">
+                        <div class="feature">
+                            <div class="feature-icon grow"></div>
+                            <h3>吞噬成长</h3>
+                            <p>吞噬灵气光点增长体型和经验</p>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon skills"></div>
+                            <h3>元素技能</h3>
+                            <p>掌握强大的五行技能对抗敌人</p>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon evolution"></div>
+                            <h3>神兽进化</h3>
+                            <p>进化成强大的五行神兽征服战场</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-actions">
+                    <button class="skip-btn">跳过</button>
+                    <button class="next-btn">下一步</button>
+                </div>
+            </div>
+
+            <!-- 页面4: 玩法模式 -->
+            <div class="onboarding-page" id="page4">
+                <div class="page-content">
+                    <h1>多样玩法</h1>
+                    <p>多种游戏模式等你挑战，与全球玩家一同争夺修真界霸主地位！</p>
+                    <div class="game-modes">
+                        <div class="mode">
+                            <div class="mode-icon classic"></div>
+                            <h3>经典模式</h3>
+                        </div>
+                        <div class="mode">
+                            <div class="mode-icon team"></div>
+                            <h3>团队模式</h3>
+                        </div>
+                        <div class="mode">
+                            <div class="mode-icon survival"></div>
+                            <h3>生存模式</h3>
+                        </div>
+                        <div class="mode">
+                            <div class="mode-icon event"></div>
+                            <h3>限时活动</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-actions">
+                    <button class="start-btn">开始游戏</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/onboarding.js"></script>
+</body>
+</html>
+

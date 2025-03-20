@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>五行蛇兄弟角色介绍 - 五行蛇Online</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/character-page.css">
+    <link rel="stylesheet" href="css/top-shortcuts.css">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <script src="js/i18n.js" defer></script>
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <header class="mini-header">
+        <nav class="main-nav">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo.svg" alt="五行蛇Online Logo">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html#features" data-i18n="nav.features">游戏特色</a>
+                <a href="index.html#gameplay" data-i18n="nav.gameplay">玩法介绍</a>
+                <a href="index.html#screenshots" data-i18n="nav.screenshots">游戏截图</a>
+                <a href="characters.html" class="active">角色介绍</a>
+                <a href="stories.html">五行传说</a>
+                <a href="comics.html">漫画故事</a>
+                <a href="index.html#download" data-i18n="nav.download">立即下载</a>
+            </div>
+            <div class="language-selector">
+                <select id="language-select">
+                    <option value="zh">中文</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+        </nav>
+    </header>
+
+    <div class="top-shortcuts">
+        <a href="index.html" class="shortcut-item">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 12L5 10M5 10L12 3L19 10M5 10V20C5 20.5523 5.44772 21 6 21H9M19 10L21 12M19 10V20C19 20.5523 18.5523 21 18 21H15M9 21C9.55228 21 10 20.5523 10 20V16C10 15.4477 10.4477 15 11 15H13C13.5523 15 14 15.4477 14 16V20C14 20.5523 14.4477 21 15 21M9 21H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="shortcut-tooltip">首页</span>
+        </a>
+        <a href="characters.html" class="shortcut-item">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 14C8.13401 14 5 17.134 5 21H19C19 17.134 15.866 14 12 14Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="shortcut-tooltip">角色介绍</span>
+        </a>
+        <a href="stories.html" class="shortcut-item">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 6.25278V19.2528M12 6.25278C10.8321 5.47686 9.24649 5 7.5 5C5.75351 5 4.16789 5.47686 3 6.25278V19.2528C4.16789 18.4769 5.75351 18 7.5 18C9.24649 18 10.8321 18.4769 12 19.2528M12 6.25278C13.1679 5.47686 14.7535 5 16.5 5C18.2465 5 19.8321 5.47686 21 6.25278V19.2528C19.8321 18.4769 18.2465 18 16.5 18C14.7535 18 13.1679 18.4769 12 19.2528" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="shortcut-tooltip">五行传说</span>
+        </a>
+        <a href="comics.html" class="shortcut-item">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 6H20M4 10H20M4 14H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="shortcut-tooltip">漫画故事</span>
+        </a>
+        <a href="index.html#play" class="shortcut-item">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" fill="currentColor"/>
+                <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2"/>
+            </svg>
+            <span class="shortcut-tooltip">立即游玩</span>
+        </a>
+    </div>
+
+    <div class="character-container">
+        <div class="character-header">
+            <h1>五行蛇兄弟角色介绍</h1>
+            <p>在遥远的五行山下，生活着拥有天地精华的五条灵蛇兄弟。他们各具特色，掌握着不同的五行元素力量，最终可以进化成强大的五行神兽。</p>
+        </div>
+
+        <div class="character-grid">
+            <!-- 金蛇阿金 -->
+            <div class="character-card" data-character="gold">
+                <div class="character-image">
+                    <img src="img/characters/gold-snake.jpg" alt="金蛇阿金">
+                    <div class="character-element element-gold">金</div>
+                </div>
+                <div class="character-info">
+                    <h3>金蛇阿金</h3>
+                    <p>坚韧不拔，攻击力强。最终可进化为白虎。</p>
+                </div>
+            </div>
+
+            <!-- 木蛇阿木 -->
+            <div class="character-card" data-character="wood">
+                <div class="character-image">
+                    <img src="img/characters/wood-snake.jpg" alt="木蛇阿木">
+                    <div class="character-element element-wood">木</div>
+                </div>
+                <div class="character-info">
+                    <h3>木蛇阿木</h3>
+                    <p>生机盎然，回复能力强。最终可进化为青龙。</p>
+                </div>
+            </div>
+
+            <!-- 水蛇阿水 -->
+            <div class="character-card" data-character="water">
+                <div class="character-image">
+                    <img src="img/characters/water-snake.jpg" alt="水蛇阿水">
+                    <div class="character-element element-water">水</div>
+                </div>
+                <div class="character-info">
+                    <h3>水蛇阿水</h3>
+                    <p>灵活多变，控制能力强。最终可进化为玄武。</p>
+                </div>
+            </div>
+
+            <!-- 火蛇阿火 -->
+            <div class="character-card" data-character="fire">
+                <div class="character-image">
+                    <img src="img/characters/fire-snake.jpg" alt="火蛇阿火">
+                    <div class="character-element element-fire">火</div>
+                </div>
+                <div class="character-info">
+                    <h3>火蛇阿火</h3>
+                    <p>热情如火，爆发力强。最终可进化为朱雀。</p>
+                </div>
+            </div>
+
+            <!-- 土蛇阿土 -->
+            <div class="character-card" data-character="earth">
+                <div class="character-image">
+                    <img src="img/characters/earth-snake.jpg" alt="土蛇阿土">
+                    <div class="character-element element-earth">土</div>
+                </div>
+                <div class="character-info">
+                    <h3>土蛇阿土</h3>
+                    <p>稳如泰山，防御能力强。最终可进化为麒麟。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 角色详情部分 -->
+        <div class="character-details" id="gold-details">
+            <h2>金蛇阿金</h2>
+            <div class="subtitle">坚韧不拔，锋利如刃</div>
+            
+            <p>金蛇阿金是蛇家五兄弟中的老大，性格刚强正直，做事雷厉风行。生来就拥有金属般的鳞片和锋利的牙齿，在兄弟中攻击力最强。作为长兄，阿金责任心强，总是冲在最前面保护弟弟们。</p>
+            
+            <p>金蛇阿金的身体呈现金黄色，在阳光下闪闪发光，如同黄金铸就。他天生就能感知金属矿藏的位置，经常为山下的村民指引采矿的方向，深受村民尊敬。</p>
+            
+            <div class="section-title">天赋能力</div>
+            <ul class="ability-list">
+                <li><span class="ability-name">金刚之体：</span>皮肤坚硬如金属，防御力极强，不易被撞晕。</li>
+                <li><span class="ability-name">切割：</span>身体边缘锋利，接触其他蛇时能造成轻微伤害。</li>
+                <li><span class="ability-name">寻矿：</span>能感知附近的稀有灵力资源，并指引方向。</li>
+            </ul>
+            
+            <div class="section-title">技能</div>
+            <ul class="ability-list">
+                <li><span class="ability-name">锋刃突刺：</span>短距离加速并留下锋利残影，触碰敌人造成伤害。</li>
+                <li><span class="ability-name">金刚护体：</span>短时间内大幅提升防御力，几乎无视任何伤害。</li>
+                <li><span class="ability-name">金属风暴：</span>（神兽形态专属）向周围发射大量金属利刃，对广范围内的敌人造成伤害。</li>
+            </ul>
+            
+            <div class="character-evolution">
+                <div class="section-title">进化路线</div>
+                <div class="evolution-stages">
+                    <div class="evolution-stage">
+                        <div class="evolution-icon" style="background-color: var(--color-gold);">初</div>
+                        <div class="evolution-name">初始形态</div>
+                        <div class="evolution-desc">金蛇</div>
+                    </div>
+                    <div class="arrow-right">→</div>
+                    <div class="evolution-stage">
+                        <div class="evolution-icon" style="background-color: var(--color-gold);">中</div>
+                        <div class="evolution-name">中级形态</div>
+                        <div class="evolution-desc">金鳞蛇</div>
+                    </div>
+                    <div class="arrow-right">→</div>
+                    <div class="evolution-stage">
+                        <div class="evolution-icon" style="background-color: var(--color-gold);">高</div>
+                        <div class="evolution-name">高级形态</div>
+                        <div class="evolution-desc">金爪蛇</div>
+                    </div>
+                    <div class="arrow-right">→</div>
+                    <div class="evolution-stage">
+                        <div class="evolution-icon" style="background-color: var(--color-gold);">神</div>
+                        <div class="evolution-name">神兽形态</div>
+                        <div class="evolution-desc">白虎</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="character-details" id="wood-details">
+            <h2>木蛇阿木</h2>
+            <div class="subtitle">生机勃勃，柔韧似藤</div>
+            
+            <p>木蛇阿木是蛇家五兄弟中的二哥，性格温和亲切，做事细心耐心。身体呈翠绿色，缠绕着细小的藤蔓，拥有强大的再生能力。阿木平易近人，经常在山脚下为村民治愈疾病，被称为"药蛇仙"。</p>
+            
+            <p>阿木能与植物沟通，也能加速植物生长，使得五行山下始终郁郁葱葱，四季花开不断。他喜欢在清晨时分吸收露珠中蕴含的灵气，增强自身的生命力。</p>
+            
+            <div class="section-title">天赋能力</div>
+            <ul class="ability-list">
+                <li><span class="ability-name">生机蓬勃：</span>具有极强的再生能力，受伤时恢复速度快。</li>
+                <li><span class="ability-name">植物交流：</span>能与植物沟通，了解周围环境的情况。</li>
+                <li><span class="ability-name">催生：</span>加速植物生长，可以创造天然的屏障和陷阱。</li>
+            </ul>
+            
+            <div class="section-title">技能</div>
+            <ul class="ability-list">
+                <li><span class="ability-name">藤蔓缠绕：</span>发射藤蔓束缚前方敌人，使其减速。</li>
+                <li><span class="ability-name">生命汲取：</span>短时间内吞噬食物恢复生命值并略微加速。</li>
+                <li><span class="ability-name">森罗万象：</span>（神兽形态专属）呼风唤雨，指挥植物攻击，控制周围环境。</li>
+            </ul>
+            
+            <div class="character-evolution">
+                <div class="section-title">进化路线</div>
+                <div class="evolution-stages">
+                    <div class="evolution-stage">
+                        <div class="evolution-icon" style="background-color: var(--color-green);">初</div>
+                        <div class="evolution-name">初始形态</div>
+                        <div class="evolution-desc">木蛇</div>
+                    </div>
+                    <div class="arrow-right">→</div>
+                    <div class="evolution-stage">
+                        <div class="evolution-icon" style="background-color: var(--color-green);">中</div>
+                        <div class="evolution-name">中级形态</div>
+                        <div class="evolution-desc">藤蛇</div>
+                    </div>
+                    <div class="arrow-right">→</div>
+                    <div class="evolution-stage">
+                        <div class="evolution-icon" style="background-color: var(--color-green);">高</div>
+                        <div class="evolution-name">高级形态</div>
+                        <div class="evolution-desc">碧鳞蛇</div>
+                    </div>
+                    <div class="arrow-right">→</div>
+                    <div class="evolution-stage">
+                        <div class="evolution-icon" style="background-color: var(--color-green);">神</div>
+                        <div class="evolution-name">神兽形态</div>
+                        <div class="evolution-desc">青龙</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="character-details" id="water-details">
+            <h2>水蛇阿水</h2>
+            <div class="subtitle">灵活多变，如行云流水</div>
+            
+            <p>水蛇阿水是蛇家五兄弟中的三弟，性格灵动活泼，聪明机智。身体呈湛蓝色，在阳光照射下会呈现出多彩的光泽。阿水游动速度最快，在水中更是如鱼得水。</p>
+            
+            <p>阿水能感知水源，经常为山下村民寻找地下水，解决干旱问题。他最喜欢在雨后的水塘中嬉戏，收集雨水中蕴含的天地灵气。</p>
+            
+            <div class="section-title">天赋能力</div>
+            <ul class="ability-list">
+                <li><span class="ability-name">水中呼吸：</span>在水中可以无限呼吸，移动速度翻倍。</li>
+                <li><span class="ability-name">水源感知：</span>能够感知周围水源的位置和纯净度。</li>
+                <li><span class="ability-name">流体形态：</span>身体可以稍微液化，穿过狭小空间。</li>
+            </ul>
+            
+            <div class="section-title">技能</div>
+            <ul class="ability-list">
+                <li><span class="ability-name">寒冰路径：</span>在身后留下一段冰冻路径，减速触碰的敌人。</li>
+                <li><span class="ability-name">水龙冲击：</span>向前冲刺一段距离，对前方敌人造成伤害。</li>
+                <li><span class="ability-name">冰封领域：</span>（神兽形态专属）在自身周围形成冰冻领域，大幅减速敌人。</li>
+            </ul>
+            
+            <div class="character-evolution">
+                <div class="section-title">进化路线</div>
+                <div class="evolution-stages">
+                    <div class="evolution-stage">
+                        <div class="evolution-icon" style="background-color: var(--color-blue);">初</div>
+                        <div class="evolution-name">初始形态</div>
+                        <div class="evolution-desc">水蛇</div>
+                    </div>
+                    <div class="arrow-right">→</div>
+                    <div class="evolution-stage">
+                        <div class="evolution-icon" style="background-color: var(--color-blue);">中</div>
+                        <div class="evolution-name">中级形态</div>
+                        <div class="evolution-desc">波蛇</div>
+                    </div>
+                    <div class="arrow-right">→</div>
+                    <div class="evolution-stage">
+                        <div class="evolution-icon" style="background-color: var(--color-blue);">高</div>
+                        <div class="evolution-name">高级形态</div>
+                        <div class="evolution-desc">龙蛇</div>
+                    </div>
+                    <div class="arrow-right">→</div>
+                    <div class="evolution-stage">
+                        <div class="evolution-icon" style="background-color: var(--color-blue);">神</div>
+                        <div class="evolution-name">神兽形态</div>
+                        <div class="evolution-desc">玄武</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="character-details" id="fire-details">
+            <h2>火蛇阿火</h2>
+            <div class="subtitle">热情如火，爆发力强</div>
+            
+            <p>火蛇阿火是蛇家五兄弟中的四弟，性格豪爽直率，充满热情，有时脾气急躁。身体呈鲜红色，散发着淡淡的热气，周围温度比一般地方高。阿火的攻击力仅次于阿金，但爆发力是五兄弟中最强的。</p>
+            
+            <p>阿火能掌控温度，在寒冬为山下村民提供热源，也能在火灾时控制火势蔓延。他最喜欢在烈日下吸收太阳精华，增强自身的火属性能力。</p>
+            
+            <div class="section-title">天赋能力</div>
+            <ul class="ability-list">
+                <li><span class="ability-name">火焰护体：</span>体表温度极高，接触敌人会造成灼烧伤害。</li>
+                <li><span class="ability-name">温度控制：</span>能够感知并控制周围环境的温度变化。</li>
+                <li><span class="ability-name">爆发加速：</span>短时间内能迅速提升速度，进行爆发冲刺。</li>
+            </ul>
+            
+            <div class="section-title">技能</div>
+            <ul class="ability-list">
+                <li><span class="ability-name">火焰喷射：</span>向前方喷射火焰，持续对敌人造成伤害。</li>
+                <li><span class="ability-name">烈焰护盾：</span>短时间内自身周围形成火焰护盾，触碰敌人造成伤害。</li>
+                <li><span class="ability-name">焚天之翼：</span>（神兽形态专属）展开火焰双翼，大幅提升速度并灼烧触碰的敌人。</li>
+            </ul>
+            
+            <div class="character-evolution">
+                <div class="section-title">进化路线</div>
+                <div class="evolution-stages">
+                    <div class="evolution-stage">
+                        <div class="evolution-icon" style="background-color: var(--color-red);">初</div>
+                        <div class="evolution-name">初始形态</div>
+                        <div class="evolution-desc">火蛇</div>
+                    </div>
+                    <div class="arrow-right">→</div>
+                    <div class="evolution-stage">
+                        <div class="evolution-icon" style="background-color: var(--color-red);">中</div>
+                        <div class="evolution-name">中级形态</div>
+                        <div class="evolution-desc">炎蛇</div>
+                    </div>
+                    <div class="arrow-right">→</div>
+                    <div class="evolution-stage">
+                        <div class="evolution-icon" style="background-color: var(--color-red);">高</div>
+                        <div class="evolution-name">高级形态</div>
+                        <div class="evolution-desc">烈焰蛇</div>
+                    </div>
+                    <div class="arrow-right">→</div>
+                    <div class="evolution-stage">
+                        <div class="evolution-icon" style="background-color: var(--color-red);">神</div>
+                        <div class="evolution-name">神兽形态</div>
+                        <div class="evolution-desc">朱雀</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="character-details" id="earth-details">
+            <h2>土蛇阿土</h2>
+            <div class="subtitle">稳如泰山，坚毅如岩</div>
+            
+            <p>土蛇阿土是蛇家五兄弟中的五弟，性格坚韧沉稳，稳重内敛。身体呈褐色，覆盖着岩石一般的鳞片，有着五兄弟中最强的防御力。作为老幺，阿土总是默默守护着他的哥哥们，不论面对什么危险都无所畏惧。</p>
+            
+            <p>阿土能感知地脉变化，预知地震，保护山下村民免受自然灾害的伤害。他喜欢在岩石区域静修，吸收大地的灵气，增强自身韧性。</p>
+            
+            <div class="section-title">天赋能力</div>
+            <ul class="ability-list">
+                <li><span class="ability-name">岩石之躯：</span>防御力极强，受到的伤害大幅减少。</li>
+                <li><span class="ability-name">地脉感知：</span>能感知大地变化，预知危险的到来。</li>
+                <li><span class="ability-name">山岳之力：</span>力量超群，可以推动巨石，创造障碍物。</li>
+            </ul>
+            
+            <div class="section-title">技能</div>
+            <ul class="ability-list">
+                <li><span class="ability-name">地刺突起：</span>在前方召唤地刺，阻挡敌人并造成伤害。</li>
+                <li><span class="ability-name">坚岩壁垒：</span>在前方生成一道岩石屏障，阻挡敌人。</li>
+                <li><span class="ability-name">大地崩裂：</span>（神兽形态专属）召唤地震，使周围地面裂开，限制敌人移动。</li>
+            </ul>
+            
+            <div class="character-evolution">
+                <div class="section-title">进化路线</div>
+                <div class="evolution-stages">
+                    <div class="evolution-stage">
+                        <div class="evolution-icon" style="background-color: var(--color-brown);">初</div>
+                        <div class="evolution-name">初始形态</div>
+                        <div class="evolution-desc">土蛇</div>
+                    </div>
+                    <div class="arrow-right">→</div>
+                    <div class="evolution-stage">
+                        <div class="evolution-icon" style="background-color: var(--color-brown);">中</div>
+                        <div class="evolution-name">中级形态</div>
+                        <div class="evolution-desc">岩蛇</div>
+                    </div>
+                    <div class="arrow-right">→</div>
+                    <div class="evolution-stage">
+                        <div class="evolution-icon" style="background-color: var(--color-brown);">高</div>
+                        <div class="evolution-name">高级形态</div>
+                        <div class="evolution-desc">山蛇</div>
+                    </div>
+                    <div class="arrow-right">→</div>
+                    <div class="evolution-stage">
+                        <div class="evolution-icon" style="background-color: var(--color-brown);">神</div>
+                        <div class="evolution-name">神兽形态</div>
+                        <div class="evolution-desc">麒麟</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="img/logo.svg" alt="五行蛇Online Logo">
+                    <p data-i18n="footer.tagline">成为五行神兽，主宰修真界！</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-links-column">
+                        <h4 data-i18n="footer.game">游戏</h4>
+                        <a href="index.html#features" data-i18n="footer.features">游戏特色</a>
+                        <a href="index.html#gameplay" data-i18n="footer.gameplay">玩法介绍</a>
+                        <a href="index.html#screenshots" data-i18n="footer.screenshots">游戏截图</a>
+                        <a href="index.html#download" data-i18n="footer.download">立即下载</a>
+                    </div>
+                    <div class="footer-links-column">
+                        <h4>内容</h4>
+                        <a href="characters.html">角色介绍</a>
+                        <a href="stories.html">五行传说</a>
+                        <a href="comics.html">漫画故事</a>
+                    </div>
+                    <div class="footer-links-column">
+                        <h4 data-i18n="footer.support">支持</h4>
+                        <a href="#" data-i18n="footer.faq">常见问题</a>
+                        <a href="#" data-i18n="footer.contact">联系我们</a>
+                        <a href="#" data-i18n="footer.feedback">反馈建议</a>
+                        <a href="#" data-i18n="footer.help">帮助中心</a>
+                    </div>
+                    <div class="footer-links-column">
+                        <h4 data-i18n="footer.legal">法律</h4>
+                        <a href="#" data-i18n="footer.terms">服务条款</a>
+                        <a href="#" data-i18n="footer.privacy">隐私政策</a>
+                        <a href="#" data-i18n="footer.cookies">Cookie政策</a>
+                    </div>
+                    <div class="footer-links-column">
+                        <h4 data-i18n="footer.followUs">关注我们</h4>
+                        <div class="social-links">
+                            <a href="#" aria-label="微博">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.83 17.5C12.846 17.5 15.293 15.5527 15.293 13.138C15.293 10.7233 12.846 8.77599 9.83 8.77599C6.81411 8.77599 4.36702 10.7233 4.36702 13.138C4.36702 15.5527 6.81411 17.5 9.83 17.5Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/>
+                                    <path d="M10.2349 14.7619C11.8989 14.7619 13.2489 14.0463 13.2489 13.1582C13.2489 12.27 11.8989 11.5545 10.2349 11.5545C8.57083 11.5545 7.22083 12.27 7.22083 13.1582C7.22083 14.0463 8.57083 14.7619 10.2349 14.7619Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
+                                    <path d="M11.7031 9.9762C11.7031 9.9762 16.2951 7.2817 15.594 3.98264C15.594 3.98264 15.3234 5.17193 13.5073 6.46677C11.6912 7.76161 11.7031 9.9762 11.7031 9.9762Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
+                                    <path d="M10.3931 10.6666C10.3931 10.6666 12.6211 9.1809 12.3251 7.46619C12.3251 7.46619 12.1862 8.07554 11.2411 8.72172C10.2961 9.3679 10.3931 10.6666 10.3931 10.6666Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
+                                    <path d="M16.3039 11.5873C16.3039 11.5873 19.6799 11.2024 19.6079 9.38095C19.6079 9.38095 18.9449 10.0618 16.3039 11.5873Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
+                                </svg>
+                            </a>
+                            <a href="#" aria-label="微信">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.15 7.15C14.2 3.2 7.25 4.95 7.25 10.9C7.25 12.75 8.25 14.3 9.45 15.4C9.5 15.45 9.35 15.9 9.25 16.1C9 16.65 8.45 17.9 8.45 17.9C8.45 17.9 10.3 17 10.6 16.9C10.7 16.85 10.95 16.7 11.1 16.7C11.5 16.8 12 16.9 12.5 16.9C17.55 16.9 20.25 12.3 18.15 7.15Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
+                                    <path d="M14.5 13.25C14.5 13.25 12.5 15.15 10.5 13.25" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
+                                </svg>
+                            </a>
+                            <a href="#" aria-label="抖音">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.6516 5.24797C16.319 4.58847 16.1506 3.86028 16.1596 3.12297H12.0516V14.903C12.0393 15.3939 11.9063 15.8739 11.6643 16.299C11.4223 16.724 11.0787 17.0806 10.6656 17.337C10.2525 17.5934 9.7827 17.7429 9.29211 17.7721C8.80152 17.8013 8.31203 17.7094 7.87164 17.505C7.43126 17.3006 7.05569 16.9897 6.78008 16.6006C6.50447 16.2116 6.33949 15.7573 6.30318 15.2831C6.26686 14.8089 6.36045 14.3348 6.5752 13.908C6.78994 13.4812 7.11773 13.1176 7.52764 12.85C8.08964 12.485 8.75364 12.335 9.41464 12.425C9.59013 12.4518 9.76246 12.4957 9.92864 12.556V8.40497C9.73398 8.37887 9.5378 8.36598 9.34164 8.36647C8.20964 8.36647 7.09664 8.66897 6.12164 9.24297C5.14664 9.81697 4.34964 10.643 3.81064 11.634C3.27164 12.625 3.01064 13.7469 3.05764 14.882C3.10464 16.017 3.45764 17.113 4.07364 18.054C4.56786 18.8078 5.2224 19.4471 5.99264 19.923C6.76288 20.3989 7.63068 20.699 8.53364 20.8C9.43659 20.901 10.3526 20.8007 11.2125 20.506C12.0724 20.2112 12.8549 19.7291 13.5056 19.092C14.1564 18.4548 14.6611 17.6797 14.9834 16.822C15.3058 15.9643 15.4386 15.0443 15.3736 14.129V9.35697C16.9996 10.499 18.9096 11.1 20.9396 11.1V7.00297C19.4178 7.01415 17.925 6.64217 16.6516 5.93397V5.24797Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                            <a href="#" aria-label="哔哩哔哩">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.2746 9.28033H5.72619V17.5308H18.2746V9.28033Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                                    <path d="M3.79102 7.33997L5.76523 5.375H18.2653L20.2091 7.33997V9.31421" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M10.2277 13.4058C10.2277 12.8535 9.78009 12.406 9.22781 12.406C8.67552 12.406 8.22787 12.8535 8.22787 13.4058C8.22787 13.9581 8.67552 14.4056 9.22781 14.4056C9.78009 14.4056 10.2277 13.9581 10.2277 13.4058Z" fill="currentColor"/>
+                                    <path d="M15.772 13.4058C15.772 12.8535 15.3243 12.406 14.772 12.406C14.2198 12.406 13.7721 12.8535 13.7721 13.4058C13.7721 13.9581 14.2198 14.4056 14.772 14.4056C15.3243 14.4056 15.772 13.9581 15.772 13.4058Z" fill="currentColor"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p data-i18n="footer.copyright"> 2023 五行蛇Online. 保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/character-page.js" defer></script>
+</body>
+</html>
