@@ -1,0 +1,71 @@
+.top-shortcuts {
+  position: fixed;
+  top: 15%;
+  right: 20px;
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.shortcut-item {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(40, 31, 62, 0.85);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  color: white;
+  text-decoration: none;
+}
+
+.shortcut-item:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  background: rgba(140, 96, 255, 0.9);
+}
+
+.shortcut-item .icon {
+  width: 24px;
+  height: 24px;
+  fill: white;
+}
+
+.shortcut-tooltip {
+  position: absolute;
+  right: 60px;
+  background: rgba(40, 31, 62, 0.9);
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.shortcut-item:hover .shortcut-tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (max-width: 768px) {
+  .top-shortcuts {
+    bottom: 20px;
+    top: auto;
+    right: 20px;
+    flex-direction: row;
+  }
+  
+  .shortcut-tooltip {
+    bottom: 60px;
+    right: auto;
+  }
+}
+

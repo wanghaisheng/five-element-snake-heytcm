@@ -1,132 +1,635 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="A mobile simulator designed to demonstrate mobile interface design.">
-  <meta name="keywords" content="mobile, simulator, mobile design, mobile app">
-  <meta name="author" content="Your Name or Company">
-  <meta http-equiv="Content-Language" content="en">
-
-  <!-- Canonical Link -->
-  <link rel="canonical" href="https://www.yourwebsite.com/pc-simulator" />
-
-  <!-- Open Graph for Social Media -->
-  <meta property="og:title" content="PC Simulator">
-  <meta property="og:description" content="A mobile simulator designed to demonstrate mobile interface design.">
-  <meta property="og:image" content="https://www.yourwebsite.com/pc-simulator-image.jpg">
-  <meta property="og:url" content="https://www.yourwebsite.com/pc-simulator">
-  <meta property="og:type" content="website">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="PC Simulator">
-  <meta name="twitter:description" content="A mobile simulator designed to demonstrate mobile interface design.">
-  <meta name="twitter:image" content="https://www.yourwebsite.com/pc-simulator-image.jpg">
-  <meta name="twitter:creator" content="@yourtwitterhandle">
-
-  <!-- Favicon -->
-  <link rel="icon" href="https://www.yourwebsite.com/favicon.ico" type="image/x-icon">
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-Y"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    gtag('config', 'UA-XXXXX-Y');
-  </script>
-
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y) {
-      window.clarity=window.clarity||function(){(clarity.q=clarity.q||[]).push(arguments)};
-      clarity('set', 'anonymizeIP', true);
-      i=l.createElement('script');i.async=1;i.src=r;i.type='text/javascript';
-      t=l.getElementsByTagName('script')[0];t.parentNode.insertBefore(i,t);
-    })(document,window,'script','https://www.clarity.ms/tag/XXXXXX');
-  </script>
-
-  <title>PC Simulator</title>
-
-  <style>
-    /* Global Styles */
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-    }
-
-    .mobile-container {
-      width: 360px;
-      height: 640px;
-      border: 16px solid black;
-      border-radius: 16px;
-      background-color: #fff;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .content {
-      font-size: 1.2rem;
-      color: #333;
-    }
-
-    /* Adjustments for PC */
-    @media (min-width: 768px) {
-      .mobile-container {
-        width: 600px;
-        height: 1000px;
-      }
-
-      .content {
-        font-size: 1.5rem;
-      }
-    }
-
-    @media (min-width: 1024px) {
-      .mobile-container {
-        width: 800px;
-        height: 1400px;
-      }
-
-      .content {
-        font-size: 1.8rem;
-      }
-    }
-
-    /* Additional responsiveness for larger screens */
-    @media (min-width: 1200px) {
-      body {
-        justify-content: flex-start;
-      }
-
-      .mobile-container {
-        margin-top: 50px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>五行蛇Online - 成为五行神兽，主宰修真界！</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/top-shortcuts.css">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <meta name="description" content="五行蛇Online - 融合贪吃蛇与五行进化系统的多人在线对战游戏，选择金木水火土五蛇兄弟，进化成神兽，主宰修真界！">
+    <script src="js/i18n.js" defer></script>
+    <script src="js/main.js" defer></script>
 </head>
-
 <body>
-  <div class="mobile-container">
-    <div class="content">
-      <p>Mobile Simulator Screen</p>
-      <p>PC Version: Adjusted for larger screens.</p>
+    <header class="hero">
+        <nav class="main-nav">
+            <div class="logo">
+                <img src="img/logo.svg" alt="五行蛇Online Logo">
+            </div>
+            <div class="nav-links">
+                <a href="#features" data-i18n="nav.features">游戏特色</a>
+                <a href="#gameplay" data-i18n="nav.gameplay">玩法介绍</a>
+                <a href="#play" data-i18n="nav.play">立即游玩</a>
+                <a href="#tournaments">比赛活动</a>
+                <a href="#community">社区互动</a>
+                <a href="#updates">更新日志</a>
+                <a href="characters.html">角色介绍</a>
+                <a href="stories.html">五行传说</a>
+                <a href="comics.html">漫画故事</a>
+                <a href="#download" data-i18n="nav.download">立即下载</a>
+            </div>
+            <div class="language-selector">
+                <select id="language-select">
+                    <option value="zh">中文</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+        </nav>
+        
+        <div class="hero-content">
+            <h1 data-i18n="hero.title">五行蛇Online</h1>
+            <h2 data-i18n="hero.subtitle">成为五行神兽，主宰修真界！</h2>
+            <p data-i18n="hero.description">融合传统贪吃蛇与五行进化系统的多人在线对战游戏，选择金木水火土五蛇兄弟，收集灵气，进化觉醒，成为强大的五行神兽！</p>
+            <div class="hero-cta">
+                <a href="#download" class="cta-primary pulse-button" data-i18n="hero.cta.primary">免费下载</a>
+                <a href="#gameplay" class="cta-secondary" data-i18n="hero.cta.secondary">观看演示</a>
+            </div>
+        </div>
+        
+        <div class="hero-video">
+            <video autoplay loop muted>
+                <source src="https://example.com/placeholder-video.mp4" type="video/mp4">
+                <!-- 视频回退为动画GIF -->
+                <img src="img/gameplay-preview.gif" alt="五行蛇Online游戏演示">
+            </video>
+        </div>
+    </header>
+    <div class="top-shortcuts">
+        <a href="index.html" class="shortcut-item">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 12L5 10M5 10L12 3L19 10M5 10V20C5 20.5523 5.44772 21 6 21H9M19 10L21 12M19 10V20C19 20.5523 18.5523 21 18 21H15M9 21C9.55228 21 10 20.5523 10 20V16C10 15.4477 10.4477 15 11 15H13C13.5523 15 14 15.4477 14 16V20C14 20.5523 14.4477 21 15 21M9 21H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="shortcut-tooltip">首页</span>
+        </a>
+        <a href="characters.html" class="shortcut-item">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 14C8.13401 14 5 17.134 5 21H19C19 17.134 15.866 14 12 14Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="shortcut-tooltip">角色介绍</span>
+        </a>
+        <a href="stories.html" class="shortcut-item">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 6.25278V19.2528M12 6.25278C10.8321 5.47686 9.24649 5 7.5 5C5.75351 5 4.16789 5.47686 3 6.25278V19.2528C4.16789 18.4769 5.75351 18 7.5 18C9.24649 18 10.8321 18.4769 12 19.2528M12 6.25278C13.1679 5.47686 14.7535 5 16.5 5C18.2465 5 19.8321 5.47686 21 6.25278V19.2528C19.8321 18.4769 18.2465 18 16.5 18C14.7535 18 13.1679 18.4769 12 19.2528" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="shortcut-tooltip">五行传说</span>
+        </a>
+        <a href="comics.html" class="shortcut-item">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 6H20M4 10H20M4 14H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="shortcut-tooltip">漫画故事</span>
+        </a>
+        <a href="#play" class="shortcut-item">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" fill="currentColor"/>
+                <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2"/>
+            </svg>
+            <span class="shortcut-tooltip">立即游玩</span>
+        </a>
     </div>
-  </div>
-</body>
 
+    <section class="pain-points">
+        <div class="container">
+            <h2 data-i18n="painPoints.title">传统多人游戏让你感到厌倦了吗？</h2>
+            <div class="pain-points-grid">
+                <div class="pain-point">
+                    <div class="pain-point-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 8V12L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="painPoints.repetitive.title">枯燥重复的游戏机制</h3>
+                    <p data-i18n="painPoints.repetitive.description">玩腻了毫无变化的贪吃蛇游戏？同样的游戏模式，同样的单调策略。</p>
+                </div>
+                <div class="pain-point">
+                    <div class="pain-point-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="painPoints.shallow.title">缺乏深度的游戏体验</h3>
+                    <p data-i18n="painPoints.shallow.description">简单到缺乏挑战性，没有进阶目标，玩几分钟就失去了兴趣。</p>
+                </div>
+                <div class="pain-point">
+                    <div class="pain-point-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 6H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M4 12H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="painPoints.noStrategy.title">缺乏战略性的对抗</h3>
+                    <p data-i18n="painPoints.noStrategy.description">纯粹的速度和运气，而非技巧和策略，让游戏失去了深度和乐趣。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="solution">
+        <div class="container">
+            <h2 data-i18n="solution.title">五行蛇Online：重新定义多人对战游戏</h2>
+            <p class="section-intro" data-i18n="solution.intro">《五行蛇Online》将传统贪吃蛇玩法与五行相生相克、神兽进化系统相结合，打造出全新概念的多人在线竞技游戏。</p>
+            
+            <div class="solution-features">
+                <div class="solution-feature">
+                    <div class="solution-icon elemental-system"></div>
+                    <h3 data-i18n="solution.elementalSystem.title">五行属性系统</h3>
+                    <p data-i18n="solution.elementalSystem.description">选择金木水火土五种属性的小蛇，每种属性拥有独特的被动能力和技能组合，开创个性化的游戏体验。</p>
+                </div>
+                <div class="solution-feature">
+                    <div class="solution-icon evolution-system"></div>
+                    <h3 data-i18n="solution.evolutionSystem.title">进化觉醒系统</h3>
+                    <p data-i18n="solution.evolutionSystem.description">吞噬灵气，不断成长，突破进化瓶颈，最终化身为神兽，拥有压倒性的力量。</p>
+                </div>
+                <div class="solution-feature">
+                    <div class="solution-icon skill-system"></div>
+                    <h3 data-i18n="solution.skillSystem.title">独特技能系统</h3>
+                    <p data-i18n="solution.skillSystem.description">掌握主动技能、被动能力和终极神兽变身，策略性地运用技能击败对手。</p>
+                </div>
+                <div class="solution-feature">
+                    <div class="solution-icon map-system"></div>
+                    <h3 data-i18n="solution.mapSystem.title">多样化地图环境</h3>
+                    <p data-i18n="solution.mapSystem.description">在五行山脉、遗迹、火山等多种地图中战斗，利用地形优势取得胜利。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2 data-i18n="features.title">游戏特色</h2>
+            
+            <div class="feature-card">
+                <div class="feature-content">
+                    <h3 data-i18n="features.brothers.title">蛇家五兄弟的故事</h3>
+                    <p data-i18n="features.brothers.description">在遥远的五行山下，生活着金蛇阿金、木蛇阿木、水蛇阿水、火蛇阿火和土蛇阿土五条拥有天地精华的灵蛇兄弟。当邪恶势力入侵家园，他们必须变得更强大，觉醒成为五行神兽来保护自己的领地。</p>
+                    <ul class="feature-list">
+                        <li data-i18n="features.brothers.point1">选择你喜欢的蛇兄弟，体验不同的游戏风格</li>
+                        <li data-i18n="features.brothers.point2">独特的角色背景故事与成长轨迹</li>
+                        <li data-i18n="features.brothers.point3">感受五兄弟之间的羁绊与力量</li>
+                    </ul>
+                </div>
+                <div class="feature-image">
+                    <img src="img/snake-brothers.svg" alt="蛇家五兄弟">
+                </div>
+            </div>
+            
+            <div class="feature-card reverse">
+                <div class="feature-content">
+                    <h3 data-i18n="features.evolution.title">进化系统：从小蛇到神兽</h3>
+                    <p data-i18n="features.evolution.description">每条蛇都有独特的进化路线，通过吞噬灵气光点、元素灵珠和击败对手获得经验值，达到特定条件后进行进化，最终形态为强大的五行神兽：金蛇化白虎、木蛇化青龙、水蛇化玄武、火蛇化朱雀、土蛇化麒麟。</p>
+                    <ul class="feature-list">
+                        <li data-i18n="features.evolution.point1">三阶段进化，每次进化都带来外观与能力的显著变化</li>
+                        <li data-i18n="features.evolution.point2">进化时可选择强化方向，打造专属游戏风格</li>
+                        <li data-i18n="features.evolution.point3">神兽形态拥有终极技能，能够扭转战局</li>
+                    </ul>
+                </div>
+                <div class="feature-image">
+                    <img src="img/evolution-system.svg" alt="进化系统">
+                </div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-content">
+                    <h3 data-i18n="features.skills.title">五行技能系统</h3>
+                    <p data-i18n="features.skills.description">基于五行相生相克原理，每种属性的蛇拥有独特的技能组合。吞噬元素灵珠获得强大的主动技能，达到最高进化阶段后可以变身为对应神兽，释放神兽专属技能。</p>
+                    <ul class="feature-list">
+                        <li data-i18n="features.skills.point1">被动属性技能：与生俱来的特殊能力</li>
+                        <li data-i18n="features.skills.point2">主动战斗技能：灵活运用策略击败对手</li>
+                        <li data-i18n="features.skills.point3">神兽终极技能：压倒性的战场控制力</li>
+                    </ul>
+                </div>
+                <div class="feature-image">
+                    <img src="img/skills-system.svg" alt="五行技能系统">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="play" class="play-game">
+        <div class="container">
+            <h2 data-i18n="play.title">立即游玩</h2>
+            <p class="section-intro" data-i18n="play.intro">体验五行蛇Online的多人在线对战！无需下载，直接在浏览器中游玩。</p>
+            
+            <div class="game-frame-container">
+                <iframe src="game/snake-game.html" class="game-frame" allowfullscreen></iframe>
+            </div>
+            
+            <div class="game-instructions">
+                <h3 data-i18n="play.instructions.title">游戏说明</h3>
+                <ul>
+                    <li data-i18n="play.instructions.point1">使用W、A、S、D或箭头键控制蛇的移动</li>
+                    <li data-i18n="play.instructions.point2">吞噬灵气光点增长体型和获取分数</li>
+                    <li data-i18n="play.instructions.point3">吞噬与你属性相同的灵气获得双倍分数</li>
+                    <li data-i18n="play.instructions.point4">按空格键使用你的属性技能</li>
+                    <li data-i18n="play.instructions.point5">撞到自己、其他玩家或墙壁将导致游戏结束</li>
+                </ul>
+                <div class="game-cta">
+                    <a href="game/snake-game.html" class="cta-secondary" data-i18n="play.fullscreen" target="_blank">全屏游戏</a>
+                    <a href="#download" class="cta-primary" data-i18n="play.download">下载完整版</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gameplay" class="gameplay">
+        <div class="container">
+            <h2 data-i18n="gameplay.title">游戏玩法</h2>
+            <div class="gameplay-video">
+                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/VIDEO_ID" title="游戏玩法演示" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            
+            <div class="gameplay-steps">
+                <div class="gameplay-step">
+                    <div class="step-number">1</div>
+                    <h3 data-i18n="gameplay.step1.title">选择属性</h3>
+                    <p data-i18n="gameplay.step1.description">选择金木水火土之一，开始你的修炼之旅。每种属性都有独特的初始能力和进化方向。</p>
+                </div>
+                <div class="gameplay-step">
+                    <div class="step-number">2</div>
+                    <h3 data-i18n="gameplay.step2.title">吞噬成长</h3>
+                    <p data-i18n="gameplay.step2.description">在地图上吞噬灵气光点，增加自身长度和经验值，逐渐变得更强大。</p>
+                </div>
+                <div class="gameplay-step">
+                    <div class="step-number">3</div>
+                    <h3 data-i18n="gameplay.step3.title">收集技能</h3>
+                    <p data-i18n="gameplay.step3.description">吞噬随机刷新的元素灵珠，获得并使用强大的主动技能，增强战斗力。</p>
+                </div>
+                <div class="gameplay-step">
+                    <div class="step-number">4</div>
+                    <h3 data-i18n="gameplay.step4.title">策略对抗</h3>
+                    <p data-i18n="gameplay.step4.description">利用自身属性、技能和环境与其他玩家进行对抗，避免被撞晕，并尝试包围和击杀其他蛇。</p>
+                </div>
+                <div class="gameplay-step">
+                    <div class="step-number">5</div>
+                    <h3 data-i18n="gameplay.step5.title">进化变强</h3>
+                    <p data-i18n="gameplay.step5.description">达到一定条件后进行进化，提升基础属性和解锁更强大的能力。</p>
+                </div>
+                <div class="gameplay-step">
+                    <div class="step-number">6</div>
+                    <h3 data-i18n="gameplay.step6.title">神兽变身</h3>
+                    <p data-i18n="gameplay.step6.description">收集神兽之魂，在关键时刻变身为强大的五行神兽，主宰战场。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="screenshots" class="screenshots">
+        <div class="container">
+            <h2 data-i18n="screenshots.title">App 截图</h2>
+            <p class="section-intro" data-i18n="screenshots.intro">体验《五行蛇Online》的可爱Q萌界面，找到最适合你的游戏体验！</p>
+            
+            <div class="style-section">
+                <h3 data-i18n="screenshots.style3.title">卡通可爱风格</h3>
+                <p data-i18n="screenshots.style3.description">Q萌可爱的UI设计，让五蛇兄弟更加亲民友好。</p>
+                <div class="screenshot-container">
+                    <iframe src="apps/base/home.html" class="app-iframe"></iframe>
+                </div>
+            </div>
+            
+            <div class="full-demo-link">
+                <a href="apps/base/onboarding-preview/index.html" class="cta-secondary" data-i18n="screenshots.fullDemo">打开完整App演示</a>
+                <p data-i18n="screenshots.demoHint">体验包含引导流程和付费墙的完整App演示！</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="testimonials">
+        <div class="container">
+            <h2 data-i18n="testimonials.title">玩家反馈</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text" data-i18n="testimonials.review1.text">"五行蛇将贪吃蛇的简单玩法与深度策略完美结合！每种属性的蛇都有独特玩法，进化系统更是让人欲罢不能。已经连续玩了一周了！"</p>
+                    <div class="testimonial-author">
+                        <img src="img/avatar1.jpg" alt="玩家头像">
+                        <div class="author-info">
+                            <p class="author-name" data-i18n="testimonials.review1.name">刘小乐</p>
+                            <p class="author-meta" data-i18n="testimonials.review1.meta">火蛇爱好者，游戏时长87小时</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text" data-i18n="testimonials.review2.text">"神兽变身系统太酷了！当我第一次将水蛇进化为玄武时，那种成就感无与伦比。五行相克的设计也增加了很多策略深度。"</p>
+                    <div class="testimonial-author">
+                        <img src="img/avatar2.jpg" alt="玩家头像">
+                        <div class="author-info">
+                            <p class="author-name" data-i18n="testimonials.review2.name">王大海</p>
+                            <p class="author-meta" data-i18n="testimonials.review2.meta">水蛇玩家，全服排名前10</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text" data-i18n="testimonials.review3.text">"作为一个老贪吃蛇玩家，这款游戏让我重新找到了乐趣！五行属性和技能系统的加入使游戏策略性大大增强，每局都是新的挑战。"</p>
+                    <div class="testimonial-author">
+                        <img src="img/avatar3.jpg" alt="玩家头像">
+                        <div class="author-info">
+                            <p class="author-name" data-i18n="testimonials.review3.name">张小月</p>
+                            <p class="author-meta" data-i18n="testimonials.review3.meta">木蛇玩家，游戏时长120+小时</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tournaments" class="tournaments">
+        <div class="container">
+            <h2>比赛活动</h2>
+            <p class="section-intro">参与五行蛇Online官方赛事，展示技巧，赢取丰厚奖励！</p>
+            
+            <div class="tournaments-grid">
+                <div class="tournament-card">
+                    <div class="tournament-image">
+                        <img src="img/tournament-1.jpg" alt="五行争霸赛">
+                    </div>
+                    <div class="tournament-content">
+                        <h3>五行争霸赛</h3>
+                        <div class="tournament-date">每月第一个周末</div>
+                        <p>所有玩家都可参与的大型赛事，五种属性的蛇各自为战，角逐各自属性的最强者。</p>
+                        <div class="prize">
+                            <span class="prize-label">奖励：</span>
+                            <span class="prize-value">限定神兽皮肤、3000游戏币</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tournament-card">
+                    <div class="tournament-image">
+                        <img src="img/tournament-2.jpg" alt="神兽传说杯">
+                    </div>
+                    <div class="tournament-content">
+                        <h3>神兽传说杯</h3>
+                        <div class="tournament-date">每季度末</div>
+                        <p>季度性精英赛事，仅限段位达到"修真者"以上的玩家参与，争夺本季度最强修真者称号。</p>
+                        <div class="prize">
+                            <span class="prize-label">奖励：</span>
+                            <span class="prize-value">实物周边、神兽觉醒材料包、10000游戏币</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tournament-card">
+                    <div class="tournament-image">
+                        <img src="img/tournament-3.jpg" alt="五蛇兄弟团队赛">
+                    </div>
+                    <div class="tournament-content">
+                        <h3>五蛇兄弟团队赛</h3>
+                        <div class="tournament-date">每周末</div>
+                        <p>组队参与的趣味赛事，每队5人，每人使用不同属性的蛇，考验团队协作能力。</p>
+                        <div class="prize">
+                            <span class="prize-label">奖励：</span>
+                            <span class="prize-value">团队皮肤套装、2000游戏币</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="community" class="community">
+        <div class="container">
+            <h2>社区互动</h2>
+            <p class="section-intro">加入五行蛇Online的社区，与其他修真者交流心得，参与丰富活动！</p>
+            
+            <div class="community-features">
+                <div class="community-feature">
+                    <div class="community-icon forums"></div>
+                    <h3>玩家论坛</h3>
+                    <p>分享游戏攻略、组队交友、讨论最新更新，与全球玩家互动交流。</p>
+                    <a href="#" class="community-link">进入论坛</a>
+                </div>
+                
+                <div class="community-feature">
+                    <div class="community-icon events"></div>
+                    <h3>线下活动</h3>
+                    <p>定期举办线下玩家聚会、Cosplay比赛、主题展览，与开发团队面对面交流。</p>
+                    <a href="#" class="community-link">活动日历</a>
+                </div>
+                
+                <div class="community-feature">
+                    <div class="community-icon creator"></div>
+                    <h3>创作者计划</h3>
+                    <p>为游戏创作同人小说、漫画、音乐、视频的玩家提供展示平台和奖励支持。</p>
+                    <a href="#" class="community-link">申请加入</a>
+                </div>
+                
+                <div class="community-feature">
+                    <div class="community-icon stream"></div>
+                    <h3>直播频道</h3>
+                    <p>观看高手玩家直播，学习技巧，参与互动问答，赢取直播专属礼物。</p>
+                    <a href="#" class="community-link">观看直播</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="updates" class="updates">
+        <div class="container">
+            <h2>更新日志</h2>
+            <p class="section-intro">了解五行蛇Online的最新变化和即将到来的内容！</p>
+            
+            <div class="update-timeline">
+                <div class="update-item">
+                    <div class="update-version">v1.5.0</div>
+                    <div class="update-date">2023年12月15日</div>
+                    <div class="update-content">
+                        <h3>冬日祭典更新</h3>
+                        <ul class="update-list">
+                            <li>新增冬季限定地图 - 五行雪山</li>
+                            <li>五蛇兄弟冬季限定皮肤</li>
+                            <li>神兽雪原形态解锁</li>
+                            <li>冬日祭典限时活动与奖励</li>
+                            <li>平衡调整：水蛇技能冷却时间优化</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="update-item">
+                    <div class="update-version">v1.4.2</div>
+                    <div class="update-date">2023年11月20日</div>
+                    <div class="update-content">
+                        <h3>系统优化更新</h3>
+                        <ul class="update-list">
+                            <li>服务器性能提升</li>
+                            <li>匹配机制优化</li>
+                            <li>移动端操作响应优化</li>
+                            <li>修复已知的神兽变身Bug</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="update-item">
+                    <div class="update-version">v1.4.0</div>
+                    <div class="update-date">2023年10月5日</div>
+                    <div class="update-content">
+                        <h3>秋季主题更新</h3>
+                        <ul class="update-list">
+                            <li>新增地图 - 五行秘境</li>
+                            <li>秋收活动与限定奖励</li>
+                            <li>新增进化分支选择系统</li>
+                            <li>玩家对战数据统计功能</li>
+                            <li>平衡调整：火蛇和土蛇能力微调</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="update-item future">
+                    <div class="update-version">v1.6.0</div>
+                    <div class="update-date">即将到来</div>
+                    <div class="update-content">
+                        <h3>神兽对决 大型版本更新</h3>
+                        <ul class="update-list">
+                            <li>全新游戏模式：神兽对决</li>
+                            <li>神兽进化系统深化</li>
+                            <li>新增跨平台账号同步</li>
+                            <li>全新地图：天界战场</li>
+                            <li>更多精彩，敬请期待！</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="download" class="download">
+        <div class="container">
+            <h2 data-i18n="download.title">立即加入五行蛇Online</h2>
+            <p class="section-intro" data-i18n="download.intro">选择你的平台，免费下载游戏，开始你的五行修炼之旅！</p>
+            
+            <div class="download-options">
+                <div class="download-option">
+                    <div class="platform-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.05 21.18C16.2838 22.0358 15.3349 22.286 14.22 21.94C13.0709 21.6 12.0525 21.6 11.0975 21.94C9.68841 22.3867 8.70692 21.9533 7.94004 21.18C3.97004 17.028 4.53004 10.452 9.05004 10.254C10.292 10.3287 11.1155 10.9067 11.7894 10.9614C12.793 10.7547 13.7598 10.1633 14.9094 10.3013C16.3309 10.47 17.3951 11.052 18.0975 12.048C14.835 13.863 15.519 18.264 18.525 19.308C17.9691 20.0667 17.5111 20.622 17.05 21.18ZM11.7894 10.254C11.6154 7.89 13.5334 5.97 15.7694 5.748C16.0294 8.394 13.3674 10.416 11.7894 10.254Z" fill="currentColor" stroke="currentColor" stroke-width="0.1"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="download.ios">iOS版</h3>
+                    <a href="https://apps.apple.com/app/id123456789" class="download-button">
+                        <img src="img/app-store-badge.svg" alt="App Store下载">
+                    </a>
+                </div>
+                <div class="download-option">
+                    <div class="platform-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="download.android">Android版</h3>
+                    <a href="https://play.google.com/store/apps/details?id=com.example.wuxingsnake" class="download-button">
+                        <img src="img/google-play-badge.svg" alt="Google Play下载">
+                    </a>
+                </div>
+                <div class="download-option">
+                    <div class="platform-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 8V16C21 18.7614 18.7614 21 16 21H8C5.23858 21 3 18.7614 3 16V8C3 5.23858 5.23858 3 8 3H16C18.7614 3 21 5.23858 21 8Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M17 9L8 17.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M12 7L7 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M17 13.5L13 17.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="download.web">网页版</h3>
+                    <a href="https://play.wuxingsnake.io" class="download-button web-button" data-i18n="download.webPlay">立即游玩</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2 data-i18n="newsletter.title">订阅游戏更新</h2>
+                <p data-i18n="newsletter.description">成为第一个获取五行蛇Online更新、活动和限时奖励信息的玩家！</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="输入你的邮箱地址" required>
+                    <button type="submit" data-i18n="newsletter.subscribe">订阅</button>
+                </form>
+                <p class="privacy-note" data-i18n="newsletter.privacy">我们尊重您的隐私，绝不会共享您的信息。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="img/logo.svg" alt="五行蛇Online Logo">
+                    <p data-i18n="footer.tagline">成为五行神兽，主宰修真界！</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-links-column">
+                        <h4 data-i18n="footer.game">游戏</h4>
+                        <a href="#features" data-i18n="footer.features">游戏特色</a>
+                        <a href="#gameplay" data-i18n="footer.gameplay">玩法介绍</a>
+                        <a href="#play" data-i18n="footer.play">立即游玩</a>
+                        <a href="#tournaments">比赛活动</a>
+                        <a href="#community">社区互动</a>
+                        <a href="#updates">更新日志</a>
+                        <a href="#download" data-i18n="footer.download">立即下载</a>
+                    </div>
+                    <div class="footer-links-column">
+                        <h4 data-i18n="footer.support">支持</h4>
+                        <a href="#" data-i18n="footer.faq">常见问题</a>
+                        <a href="#" data-i18n="footer.contact">联系我们</a>
+                        <a href="#" data-i18n="footer.feedback">反馈建议</a>
+                        <a href="#" data-i18n="footer.help">帮助中心</a>
+                    </div>
+                    <div class="footer-links-column">
+                        <h4 data-i18n="footer.legal">法律</h4>
+                        <a href="#" data-i18n="footer.terms">服务条款</a>
+                        <a href="#" data-i18n="footer.privacy">隐私政策</a>
+                        <a href="#" data-i18n="footer.cookies">Cookie政策</a>
+                    </div>
+                    <div class="footer-links-column">
+                        <h4>内容</h4>
+                        <a href="characters.html">角色介绍</a>
+                        <a href="stories.html">五行传说</a>
+                        <a href="comics.html">漫画故事</a>
+                    </div>
+                </div>
+                <div class="footer-links-column">
+                    <h4>关注我们</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="微博">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.83 17.5C12.846 17.5 15.293 15.5527 15.293 13.138C15.293 10.7233 12.846 8.77599 9.83 8.77599C6.81411 8.77599 4.36702 10.7233 4.36702 13.138C4.36702 15.5527 6.81411 17.5 9.83 17.5ZM11.7894 10.254C11.6154 7.89 13.5334 5.97 15.7694 5.748C16.0294 8.394 13.3674 10.416 11.7894 10.254Z" fill="currentColor" stroke="currentColor" stroke-width="0.1"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="微信">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 6.25278V19.2528M12 6.25278C10.8321 5.47686 9.24649 5 7.5 5C5.75351 5 4.16789 5.47686 3 6.25278V19.2528C4.16789 18.4769 5.75351 18 7.5 18C9.24649 18 10.8321 18.4769 12 19.2528M12 6.25278C13.1679 5.47686 14.7535 5 16.5 5C18.2465 5 19.8321 5.47686 21 6.25278V19.2528C19.8321 18.4769 18.2465 18 16.5 18C14.7535 18 13.1679 18.4769 12 19.2528" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="抖音">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18.2746 9.28033H5.72619V17.5308H18.2746V9.28033Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                                <path d="M3.79102 7.33997L5.76523 5.375H18.2653L20.2091 7.33997V9.31421" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M10.2277 13.4058C10.2277 12.8535 9.78009 12.406 9.22781 12.406C8.67552 12.406 8.22787 12.8535 8.22787 13.4058C8.22787 13.9581 8.67552 14.4056 9.22781 14.4056C9.78009 14.4056 10.2277 13.9581 10.2277 13.4058Z" fill="currentColor"/>
+                                <path d="M15.772 13.4058C15.772 12.8535 15.3243 12.406 14.772 12.406C14.2198 12.406 13.7721 12.8535 13.7721 13.4058C13.7721 13.9581 14.2198 14.4056 14.772 14.4056C15.3243 14.4056 15.772 13.9581 15.772 13.4058Z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="哔哩哔哩">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18.2746 9.28033H5.72619V17.5308H18.2746V9.28033Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                                <path d="M3.79102 7.33997L5.76523 5.375H18.2653L20.2091 7.33997V9.31421" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M10.2277 13.4058C10.2277 12.8535 9.78009 12.406 9.22781 12.406C8.67552 12.406 8.22787 12.8535 8.22787 13.4058C8.22787 13.9581 8.67552 14.4056 9.22781 14.4056C9.78009 14.4056 10.2277 13.9581 10.2277 13.4058Z" fill="currentColor"/>
+                                <path d="M15.772 13.4058C15.772 12.8535 15.3243 12.406 14.772 12.406C14.2198 12.406 13.7721 12.8535 13.7721 13.4058C13.7721 13.9581 14.2198 14.4056 14.772 14.4056C15.3243 14.4056 15.772 13.9581 15.772 13.4058Z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p data-i18n="footer.copyright"> 2023 五行蛇Online. 保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+</body>
 </html>

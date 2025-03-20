@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>五行蛇Online</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- iOS状态栏 -->
+    <div class="ios-status-bar">
+        <div class="status-time">9:41</div>
+        <div class="status-icons">
+            <span class="status-signal"></span>
+            <span class="status-wifi"></span>
+            <span class="status-battery"></span>
+        </div>
+    </div>
+
+    <!-- 主屏幕 -->
+    <div class="app-container">
+        <header class="app-header">
+            <h1>五行蛇Online</h1>
+            <div class="user-profile">
+                <img src="img/avatar.jpg" alt="用户头像">
+            </div>
+        </header>
+
+        <div class="game-stats">
+            <div class="stat-item">
+                <span class="stat-value">18</span>
+                <span class="stat-label">排名</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">2,586</span>
+                <span class="stat-label">积分</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">5</span>
+                <span class="stat-label">神兽碎片</span>
+            </div>
+        </div>
+
+        <div class="snake-selection">
+            <h2>选择你的蛇</h2>
+            <div class="snake-carousel">
+                <div class="snake-card active" data-element="gold">
+                    <div class="snake-image gold-snake"></div>
+                    <h3>金蛇 阿金</h3>
+                    <p>坚韧不拔，攻击力强</p>
+                </div>
+                <div class="snake-card" data-element="wood">
+                    <div class="snake-image wood-snake"></div>
+                    <h3>木蛇 阿木</h3>
+                    <p>生机盎然，回复能力强</p>
+                </div>
+                <div class="snake-card" data-element="water">
+                    <div class="snake-image water-snake"></div>
+                    <h3>水蛇 阿水</h3>
+                    <p>灵活多变，控制能力强</p>
+                </div>
+                <div class="snake-card" data-element="fire">
+                    <div class="snake-image fire-snake"></div>
+                    <h3>火蛇 阿火</h3>
+                    <p>热情如火，爆发力强</p>
+                </div>
+                <div class="snake-card" data-element="earth">
+                    <div class="snake-image earth-snake"></div>
+                    <h3>土蛇 阿土</h3>
+                    <p>稳如泰山，防御能力强</p>
+                </div>
+            </div>
+            <div class="snake-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+
+        <div class="game-modes">
+            <h2>游戏模式</h2>
+            <div class="mode-buttons">
+                <button class="mode-button primary">
+                    <div class="mode-icon classic-mode"></div>
+                    <span>经典模式</span>
+                </button>
+                <button class="mode-button">
+                    <div class="mode-icon team-mode"></div>
+                    <span>团队模式</span>
+                </button>
+                <button class="mode-button">
+                    <div class="mode-icon survival-mode"></div>
+                    <span>生存模式</span>
+                </button>
+                <button class="mode-button special">
+                    <div class="mode-icon event-mode"></div>
+                    <span>限时活动</span>
+                    <div class="mode-badge">新</div>
+                </button>
+            </div>
+        </div>
+
+        <button class="play-button">开始游戏</button>
+    </div>
+
+    <!-- 底部导航栏 -->
+    <nav class="tab-bar">
+        <a href="home.html" class="tab active">
+            <div class="tab-icon home-icon"></div>
+            <span>首页</span>
+        </a>
+        <a href="journey.html" class="tab">
+            <div class="tab-icon journey-icon"></div>
+            <span>修炼</span>
+        </a>
+        <a href="community.html" class="tab">
+            <div class="tab-icon community-icon"></div>
+            <span>社区</span>
+        </a>
+        <a href="profile.html" class="tab">
+            <div class="tab-icon profile-icon"></div>
+            <span>我的</span>
+        </a>
+    </nav>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
+

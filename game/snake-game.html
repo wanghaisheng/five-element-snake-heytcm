@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>五行蛇 Online - 多人游戏</title>
+    <link rel="stylesheet" href="css/game-styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1>五行蛇 Online</h1>
+            <div class="game-stats">
+                <div class="stat-box">
+                    <span id="length-value">5</span>
+                    <span class="stat-label">长度</span>
+                </div>
+                <div class="stat-box">
+                    <span id="score-value">0</span>
+                    <span class="stat-label">分数</span>
+                </div>
+                <div class="element-indicator">
+                    <div class="current-element" id="current-element"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="game-world">
+            <canvas id="gameCanvas"></canvas>
+            <div id="waiting-screen" class="waiting-screen">
+                <h2>等待其他玩家加入...</h2>
+                <div class="players-list" id="players-list"></div>
+                <p>在线玩家: <span id="player-count">1</span></p>
+            </div>
+            <div id="game-over" class="game-over hidden">
+                <h2>游戏结束!</h2>
+                <p>你的分数: <span id="final-score">0</span></p>
+                <button id="play-again-btn">再来一局</button>
+            </div>
+        </div>
+        
+        <div class="game-controls">
+            <div class="control-group">
+                <div class="element-selection">
+                    <div class="element-option active" data-element="gold">金</div>
+                    <div class="element-option" data-element="wood">木</div>
+                    <div class="element-option" data-element="water">水</div>
+                    <div class="element-option" data-element="fire">火</div>
+                    <div class="element-option" data-element="earth">土</div>
+                </div>
+            </div>
+            <div class="control-instructions">
+                <p>使用 W A S D 或箭头键移动</p>
+                <p>按空格键使用技能</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // WebsimSocket polyfill for local testing - this will be provided in the real environment
+        class WebsimSocket {
+            constructor() {
+                this.roomState = { food: {}, obstacles: {} };
+                this.presence = {};
+                this.peers = {};
+                this.clientId = 'client-' + Math.random().toString(36).substr(2, 9);
+                this.presenceCallbacks = [];
+                this.roomStateCallbacks = [];
+                this.presenceUpdateRequestCallbacks = [];
+                
+                // Add self to peers
+                this.peers[this.clientId] = {
+                    username: 'Player ' + Math.floor(Math.random() * 1000),
+                    avatarUrl: '',
+                    id: this.clientId
+                };
+                
+                // Simulate other players
+                setTimeout(() => {
+                    const botId = 'bot-' + Math.random().toString(36).substr(2, 9);
+                    this.peers[botId] = {
+                        username: 'Bot ' + Math.floor(Math.random() * 1000),
+                        avatarUrl: '',
+                        id: botId
+                    };
+                    
+                    this.presence[botId] = {
+                        element: ['gold', 'wood', 'water', 'fire', 'earth'][Math.floor(Math.random() * 5)],
+                        segments: [
+                            { x: 15, y: 10 },
+                            { x: 14, y: 10 },
+                            { x: 13, y: 10 },
+                            { x: 12, y: 10 },
+                            { x: 11, y: 10 }
+                        ],
+                        direction: { x: 1, y: 0 },
+                        score: 0,
+                        dead: false,
+                        username: this.peers[botId].username
+                    };
+                    
+                    // Notify
+                    this.presenceCallbacks.forEach(callback => callback(this.presence));
+                    
+                    // Bot AI
+                    setInterval(() => {
+                        if (!this.roomState.gameRunning) return;
+                        const bot = this.presence[botId];
+                        if (!bot || bot.dead) return;
+                        
+                        // Random direction change
+                        if (Math.random() < 0.1) {
+                            const directions = [
+                                { x: 1, y: 0 },
+                                { x: -1, y: 0 },
+                                { x: 0, y: 1 },
+                                { x: 0, y: -1 }
+                            ];
+                            // Filter out illegal moves (opposite of current direction)
+                            const validDirections = directions.filter(dir => 
+                                !(dir.x === -bot.direction.x && dir.y === -bot.direction.y)
+                            );
+                            bot.direction = validDirections[Math.floor(Math.random() * validDirections.length)];
+                        }
+                        
+                        // Move
+                        const head = bot.segments[0];
+                        const newHead = {
+                            x: head.x + bot.direction.x,
+                            y: head.y + bot.direction.y
+                        };
+                        
+                        // Check wall collision
+                        if (newHead.x < 0 || newHead.x >= 30 || newHead.y < 0 || newHead.y >= 20) {
+                            bot.dead = true;
+                            this.presenceCallbacks.forEach(callback => callback(this.presence));
+                            return;
+                        }
+                        
+                        // Add new head
+                        bot.segments.unshift(newHead);
+                        bot.segments.pop();
+                        
+                        // Update
+                        this.presenceCallbacks.forEach(callback => callback(this.presence));
+                    }, 200);
+                }, 2000);
+            }
+            
+            async initialize() {
+                return Promise.resolve();
+            }
+            
+            updatePresence(presence) {
+                this.presence[this.clientId] = {...(this.presence[this.clientId] || {}), ...presence};
+                this.presenceCallbacks.forEach(callback => callback(this.presence));
+            }
+            
+            updateRoomState(roomState) {
+                this.roomState = {...this.roomState, ...roomState};
+                this.roomStateCallbacks.forEach(callback => callback(this.roomState));
+            }
+            
+            requestPresenceUpdate(clientId, update) {
+                if (clientId !== this.clientId) {
+                    this.presenceUpdateRequestCallbacks.forEach(callback => callback(update, this.clientId));
+                }
+            }
+            
+            subscribePresence(callback) {
+                this.presenceCallbacks.push(callback);
+                return () => {
+                    this.presenceCallbacks = this.presenceCallbacks.filter(cb => cb !== callback);
+                };
+            }
+            
+            subscribeRoomState(callback) {
+                this.roomStateCallbacks.push(callback);
+                return () => {
+                    this.roomStateCallbacks = this.roomStateCallbacks.filter(cb => cb !== callback);
+                };
+            }
+            
+            subscribePresenceUpdateRequests(callback) {
+                this.presenceUpdateRequestCallbacks.push(callback);
+                return () => {
+                    this.presenceUpdateRequestCallbacks = this.presenceUpdateRequestCallbacks.filter(cb => cb !== callback);
+                };
+            }
+        }
+    </script>
+    
+    <script src="js/config.js"></script>
+    <script src="js/multiplayer-integration.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
