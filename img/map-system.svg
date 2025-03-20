@@ -1,0 +1,96 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8f9fa" />
+      <stop offset="100%" stop-color="#e9ecef" />
+    </linearGradient>
+    <!-- Map environment gradients -->
+    <linearGradient id="mountain-gradient" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#8D6E63" />
+      <stop offset="100%" stop-color="#5D4037" />
+    </linearGradient>
+    <linearGradient id="forest-gradient" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#4CAF50" />
+      <stop offset="100%" stop-color="#2E7D32" />
+    </linearGradient>
+    <linearGradient id="water-gradient" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#2196F3" />
+      <stop offset="100%" stop-color="#1565C0" />
+    </linearGradient>
+    <linearGradient id="volcano-gradient" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#F44336" />
+      <stop offset="100%" stop-color="#C62828" />
+    </linearGradient>
+    <linearGradient id="ruins-gradient" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#FFD700" />
+      <stop offset="100%" stop-color="#DAA520" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#bg-gradient)" rx="10" ry="10" />
+  
+  <!-- Map Title -->
+  <text x="200" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">五行地图系统</text>
+  
+  <!-- Map Grid -->
+  <g transform="translate(50, 50)">
+    <!-- Mountain Map (Earth) -->
+    <g transform="translate(0, 0)">
+      <rect width="90" height="90" rx="5" ry="5" fill="url(#mountain-gradient)" stroke="#333" stroke-width="1" />
+      <!-- Mountain Icon -->
+      <path d="M15,70 L30,40 L45,60 L60,20 L75,70 Z" fill="#5D4037" stroke="white" stroke-width="1" />
+      <text x="45" y="85" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">五行山脉</text>
+    </g>
+    
+    <!-- Forest Map (Wood) -->
+    <g transform="translate(100, 0)">
+      <rect width="90" height="90" rx="5" ry="5" fill="url(#forest-gradient)" stroke="#333" stroke-width="1" />
+      <!-- Tree Icons -->
+      <path d="M30,70 L30,50 L20,50 L35,35 L25,35 L40,20 L55,35 L45,35 L60,50 L50,50 L50,70 Z" fill="#2E7D32" stroke="white" stroke-width="1" />
+      <text x="45" y="85" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">青木森林</text>
+    </g>
+    
+    <!-- Volcano Map (Fire) -->
+    <g transform="translate(200, 0)">
+      <rect width="90" height="90" rx="5" ry="5" fill="url(#volcano-gradient)" stroke="#333" stroke-width="1" />
+      <!-- Volcano Icon -->
+      <path d="M30,70 L40,40 L45,50 L50,20 L55,50 L60,40 L70,70 Z" fill="#C62828" stroke="white" stroke-width="1" />
+      <path d="M45,45 L55,45 L50,30 Z" fill="#FFEB3B" />
+      <text x="45" y="85" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">火焰山谷</text>
+    </g>
+    
+    <!-- Lake Map (Water) -->
+    <g transform="translate(0, 100)">
+      <rect width="90" height="90" rx="5" ry="5" fill="url(#water-gradient)" stroke="#333" stroke-width="1" />
+      <!-- Water Icon -->
+      <path d="M20,50 C30,40 40,60 50,50 C60,40 70,60 80,50 C80,65 70,75 50,75 C30,75 20,65 20,50 Z" fill="#1565C0" stroke="white" stroke-width="1" />
+      <text x="45" y="85" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">玄水湖泊</text>
+    </g>
+    
+    <!-- Ancient Ruins Map (Metal) -->
+    <g transform="translate(100, 100)">
+      <rect width="90" height="90" rx="5" ry="5" fill="url(#ruins-gradient)" stroke="#333" stroke-width="1" />
+      <!-- Pillar Icons -->
+      <path d="M30,70 L30,30 L40,25 L50,30 L50,70 Z" fill="#DAA520" stroke="white" stroke-width="1" />
+      <path d="M60,70 L60,35 L65,32 L70,35 L70,70 Z" fill="#DAA520" stroke="white" stroke-width="1" />
+      <text x="45" y="85" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">金玉遗迹</text>
+    </g>
+    
+    <!-- Secret Map (Center) -->
+    <g transform="translate(200, 100)">
+      <rect width="90" height="90" rx="5" ry="5" fill="#8C60FF" stroke="#333" stroke-width="1" opacity="0.7" />
+      <!-- Mystery Icon -->
+      <circle cx="45" cy="45" r="25" fill="none" stroke="white" stroke-width="2" stroke-dasharray="5,3" />
+      <text x="45" y="45" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" fill="white">?</text>
+      <text x="45" y="85" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">神秘秘境</text>
+    </g>
+  </g>
+  
+  <!-- Map Legend -->
+  <g transform="translate(50, 250)">
+    <text x="0" y="10" font-family="Arial, sans-serif" font-size="12" fill="#333">• 每个地图环境对应一种五行属性</text>
+    <text x="0" y="30" font-family="Arial, sans-serif" font-size="12" fill="#333">• 在相应属性地图中，蛇的能力会得到增强</text>
+  </g>
+</svg>

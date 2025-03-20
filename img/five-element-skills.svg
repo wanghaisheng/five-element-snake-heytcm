@@ -1,0 +1,128 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8f9fa" />
+      <stop offset="100%" stop-color="#e9ecef" />
+    </linearGradient>
+    <!-- Element colors -->
+    <radialGradient id="gold-gradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#FFD700" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#DAA520" stop-opacity="0.6" />
+    </radialGradient>
+    <radialGradient id="wood-gradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#4CAF50" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#2E7D32" stop-opacity="0.6" />
+    </radialGradient>
+    <radialGradient id="water-gradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#2196F3" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#1565C0" stop-opacity="0.6" />
+    </radialGradient>
+    <radialGradient id="fire-gradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#F44336" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#C62828" stop-opacity="0.6" />
+    </radialGradient>
+    <radialGradient id="earth-gradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#8D6E63" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#5D4037" stop-opacity="0.6" />
+    </radialGradient>
+    <!-- Arrows for element relationships -->
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#8C60FF" />
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="400" fill="url(#bg-gradient)" rx="10" ry="10" />
+  
+  <!-- Title -->
+  <text x="200" y="40" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#333">五行技能系统</text>
+  
+  <!-- Center Pentagon -->
+  <g transform="translate(200, 200)">
+    <path d="M0,-90 L85.5,-27.5 L52.5,72.5 L-52.5,72.5 L-85.5,-27.5 Z" fill="white" stroke="#8C60FF" stroke-width="2" opacity="0.7" />
+  </g>
+  
+  <!-- Five Elements -->
+  <!-- Gold (Metal) -->
+  <g transform="translate(200, 110)">
+    <circle cx="0" cy="0" r="35" fill="url(#gold-gradient)" />
+    <text x="0" y="5" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">金</text>
+    <g transform="translate(0, 45)">
+      <text x="0" y="15" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">金刃突刺</text>
+    </g>
+  </g>
+  
+  <!-- Wood -->
+  <g transform="translate(285, 172)">
+    <circle cx="0" cy="0" r="35" fill="url(#wood-gradient)" />
+    <text x="0" y="5" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">木</text>
+    <g transform="translate(0, 45)">
+      <text x="0" y="15" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">藤蔓缠绕</text>
+    </g>
+  </g>
+  
+  <!-- Water -->
+  <g transform="translate(252, 272)">
+    <circle cx="0" cy="0" r="35" fill="url(#water-gradient)" />
+    <text x="0" y="5" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">水</text>
+    <g transform="translate(0, 45)">
+      <text x="0" y="15" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">寒冰路径</text>
+    </g>
+  </g>
+  
+  <!-- Fire -->
+  <g transform="translate(148, 272)">
+    <circle cx="0" cy="0" r="35" fill="url(#fire-gradient)" />
+    <text x="0" y="5" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">火</text>
+    <g transform="translate(0, 45)">
+      <text x="0" y="15" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">火焰喷射</text>
+    </g>
+  </g>
+  
+  <!-- Earth -->
+  <g transform="translate(115, 172)">
+    <circle cx="0" cy="0" r="35" fill="url(#earth-gradient)" />
+    <text x="0" y="5" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">土</text>
+    <g transform="translate(0, 45)">
+      <text x="0" y="15" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">地刺突起</text>
+    </g>
+  </g>
+  
+  <!-- Element Relationship Arrows (Generating Cycle) -->
+  <g stroke="#4CAF50" stroke-width="2" fill="none" marker-end="url(#arrowhead)">
+    <!-- Metal generates Water -->
+    <path d="M210,140 Q240,200 240,250" stroke-dasharray="5,3" />
+    <!-- Water generates Wood -->
+    <path d="M260,250 Q280,220 275,190" stroke-dasharray="5,3" />
+    <!-- Wood generates Fire -->
+    <path d="M260,180 Q200,200 165,250" stroke-dasharray="5,3" />
+    <!-- Fire generates Earth -->
+    <path d="M140,250 Q120,220 125,190" stroke-dasharray="5,3" />
+    <!-- Earth generates Metal -->
+    <path d="M140,160 Q180,120 190,130" stroke-dasharray="5,3" />
+  </g>
+  
+  <!-- Element Relationship Arrows (Controlling Cycle) -->
+  <g stroke="#F44336" stroke-width="2" fill="none" marker-end="url(#arrowhead)">
+    <!-- Metal controls Wood -->
+    <path d="M220,130 Q260,150 265,160" stroke-dasharray="3,3" />
+    <!-- Wood controls Earth -->
+    <path d="M255,180 Q200,190 145,180" stroke-dasharray="3,3" />
+    <!-- Earth controls Water -->
+    <path d="M140,190 Q180,240 230,260" stroke-dasharray="3,3" />
+    <!-- Water controls Fire -->
+    <path d="M230,280 Q200,280 170,280" stroke-dasharray="3,3" />
+    <!-- Fire controls Metal -->
+    <path d="M145,250 Q160,180 185,140" stroke-dasharray="3,3" />
+  </g>
+  
+  <!-- Legend -->
+  <g transform="translate(200, 350)">
+    <line x1="-80" y1="0" x2="-50" y2="0" stroke="#4CAF50" stroke-width="2" stroke-dasharray="5,3" />
+    <text x="-45" y="5" font-family="Arial, sans-serif" font-size="12" fill="#333">相生</text>
+    
+    <line x1="20" y1="0" x2="50" y2="0" stroke="#F44336" stroke-width="2" stroke-dasharray="3,3" />
+    <text x="55" y="5" font-family="Arial, sans-serif" font-size="12" fill="#333">相克</text>
+  </g>
+</svg>

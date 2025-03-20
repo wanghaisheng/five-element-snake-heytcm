@@ -1,0 +1,118 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8f9fa" />
+      <stop offset="100%" stop-color="#e9ecef" />
+    </linearGradient>
+    <!-- Element colors -->
+    <linearGradient id="gold-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD700" />
+      <stop offset="100%" stop-color="#DAA520" />
+    </linearGradient>
+    <linearGradient id="wood-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4CAF50" />
+      <stop offset="100%" stop-color="#2E7D32" />
+    </linearGradient>
+    <linearGradient id="water-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2196F3" />
+      <stop offset="100%" stop-color="#1565C0" />
+    </linearGradient>
+    <linearGradient id="fire-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F44336" />
+      <stop offset="100%" stop-color="#C62828" />
+    </linearGradient>
+    <linearGradient id="earth-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8D6E63" />
+      <stop offset="100%" stop-color="#5D4037" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#bg-gradient)" rx="10" ry="10" />
+  
+  <!-- Five Elements Circle -->
+  <circle cx="200" cy="150" r="120" fill="none" stroke="#8C60FF" stroke-width="2" stroke-dasharray="5,5" />
+  
+  <!-- Five Elements -->
+  <g id="elements">
+    <!-- Gold (Metal) -->
+    <g transform="translate(200, 50)">
+      <circle cx="0" cy="0" r="30" fill="url(#gold-gradient)" />
+      <text x="0" y="5" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">金</text>
+    </g>
+    
+    <!-- Wood -->
+    <g transform="translate(308, 114)">
+      <circle cx="0" cy="0" r="30" fill="url(#wood-gradient)" />
+      <text x="0" y="5" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">木</text>
+    </g>
+    
+    <!-- Water -->
+    <g transform="translate(270, 230)">
+      <circle cx="0" cy="0" r="30" fill="url(#water-gradient)" />
+      <text x="0" y="5" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">水</text>
+    </g>
+    
+    <!-- Fire -->
+    <g transform="translate(130, 230)">
+      <circle cx="0" cy="0" r="30" fill="url(#fire-gradient)" />
+      <text x="0" y="5" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">火</text>
+    </g>
+    
+    <!-- Earth -->
+    <g transform="translate(92, 114)">
+      <circle cx="0" cy="0" r="30" fill="url(#earth-gradient)" />
+      <text x="0" y="5" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">土</text>
+    </g>
+  </g>
+  
+  <!-- Generating Cycle (Clockwise) -->
+  <g id="generating-cycle" stroke="#4CAF50" stroke-width="3" fill="none">
+    <!-- Metal generates Water -->
+    <path d="M215, 75 Q 250, 150 255, 205" marker-end="url(#arrow-generate)" />
+    <!-- Water generates Wood -->
+    <path d="M290, 215 Q 320, 180 295, 130" marker-end="url(#arrow-generate)" />
+    <!-- Wood generates Fire -->
+    <path d="M280, 105 Q 220, 100 145, 215" marker-end="url(#arrow-generate)" />
+    <!-- Fire generates Earth -->
+    <path d="M125, 205 Q 100, 170 105, 130" marker-end="url(#arrow-generate)" />
+    <!-- Earth generates Metal -->
+    <path d="M115, 95 Q 150, 60 185, 65" marker-end="url(#arrow-generate)" />
+  </g>
+  
+  <!-- Overcoming Cycle (Star Pattern) -->
+  <g id="overcoming-cycle" stroke="#F44336" stroke-width="2" stroke-dasharray="5,3" fill="none">
+    <!-- Metal overcomes Wood -->
+    <path d="M225, 65 Q 270, 90 285, 100" marker-end="url(#arrow-overcome)" />
+    <!-- Wood overcomes Earth -->
+    <path d="M280, 125 Q 200, 150 115, 125" marker-end="url(#arrow-overcome)" />
+    <!-- Earth overcomes Water -->
+    <path d="M120, 130 Q 180, 180 250, 220" marker-end="url(#arrow-overcome)" />
+    <!-- Water overcomes Fire -->
+    <path d="M245, 215 Q 200, 220 155, 215" marker-end="url(#arrow-overcome)" />
+    <!-- Fire overcomes Metal -->
+    <path d="M140, 205 Q 150, 130 185, 80" marker-end="url(#arrow-overcome)" />
+  </g>
+  
+  <!-- Arrow Markers -->
+  <defs>
+    <marker id="arrow-generate" viewBox="0 0 10 10" refX="9" refY="5"
+      markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4CAF50" />
+    </marker>
+    <marker id="arrow-overcome" viewBox="0 0 10 10" refX="9" refY="5"
+      markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#F44336" />
+    </marker>
+  </defs>
+  
+  <!-- Legend -->
+  <g transform="translate(20, 270)">
+    <line x1="0" y1="0" x2="20" y2="0" stroke="#4CAF50" stroke-width="3" />
+    <text x="25" y="5" font-family="Arial, sans-serif" font-size="12" fill="#333">相生关系</text>
+    
+    <line x1="100" y1="0" x2="120" y2="0" stroke="#F44336" stroke-width="2" stroke-dasharray="5,3" />
+    <text x="125" y="5" font-family="Arial, sans-serif" font-size="12" fill="#333">相克关系</text>
+  </g>
+</svg>
